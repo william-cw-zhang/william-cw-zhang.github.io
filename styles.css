@@ -65,7 +65,7 @@ nav a::after {
 }
 nav a:focus::after,
 nav a:hover::after {
-    width: var(--gap-small);
+    width: 100%;
 }
 
 section {
@@ -103,6 +103,12 @@ ul {
     margin: 0 auto;
     padding: 0 2rem;
 }
+.compartment-contact {
+    max-width: 600px;
+}
+.compartment-contact p {
+    margin: var(--gap-small) 0 var(--gap-x-small) 0;
+}
 
 /* Buttons */
 .btn {
@@ -110,7 +116,7 @@ ul {
     padding: 0.75rem 2.5rem;
     background-color: rgba(255, 255, 255, 0.6);
     border: 2px solid var(--green);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 /* For hyperlinks inside of buttons */
@@ -142,7 +148,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--gap-x-large);
+    gap: var(--gap-large);
 }
 .projectinfo > * {
     margin-top: var(--gap-x-small);
