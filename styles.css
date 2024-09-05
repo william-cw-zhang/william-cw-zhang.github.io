@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-height: 5rem;
+    --pastel-red: #FF6961;
+}
+
+body {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+}
+
+/* Photo by Bench Accounting on Unsplash*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3)),
+        url("images/header-bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+header .compartment {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: flex-end;
+    height: var(--nav-height);
+}
+
+/* Nav buttons */
+nav a {
+  font-size: 1.25rem;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+/* Main container used to compartmentalize content */
+.compartment {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2.5rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid var(--pastel-red);
+    font-size: 1.5rem;
+}
+
+/* For hyperlinks inside of buttons */
+.plain-link {
+    color: inherit;
+    text-decoration: none;
+}
+.plain-link:hover {
+    text-decoration: none;
+}
+
+/* Introduction and call-to-action box */
+.compartment-nameplate {
+    height: calc(100% - var(--nav-height));
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.compartment-nameplate p {
+    margin: 1rem 0 3rem 0;
+}
+.nameplate {
+    padding: 0 4rem;
+}
