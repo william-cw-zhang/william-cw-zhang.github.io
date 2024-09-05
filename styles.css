@@ -55,6 +55,18 @@ nav {
 nav a {
   font-size: 1.25rem;
 }
+nav a::after {
+    content: "";
+    display: block;
+    height: 0.25rem;
+    width: 0;
+    background-color: var(--green);
+    transition: all var(--transition-time);
+}
+nav a:focus::after,
+nav a:hover::after {
+    width: var(--gap-small);
+}
 
 section {
     padding-top: var(--gap-large);
