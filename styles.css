@@ -70,8 +70,13 @@ nav a:hover::after {
 }
 
 section {
-    padding-top: var(--gap-large);
-    padding-bottom: var(--gap-x-small);
+    border-bottom: 1px solid #aaa;
+}
+
+section,
+footer {
+    padding-top: var(--gap-medium);
+    padding-bottom: var(--gap-small);
 }
 
 h1 {
@@ -110,14 +115,23 @@ ul {
 .compartment-contact p {
     margin: var(--gap-small) 0 var(--gap-x-small) 0;
 }
+.compartment-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-x-small);
+}
 
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 0.75rem 2.5rem;
+    padding: var(--gap-tiny) var(--gap-x-small);
     background-color: rgba(255, 255, 255, 0.6);
     border: 2px solid var(--green);
+    border-radius: 0.5rem;
     font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 /* For hyperlinks inside of buttons */
@@ -137,7 +151,7 @@ ul {
     font-size: 1.5rem;
 }
 .compartment-nameplate p {
-    margin: 1rem 0 3rem 0;
+    margin-bottom: var(--gap-small);
 }
 .nameplate {
     padding-left: var(--gap-x-small);
