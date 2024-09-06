@@ -6,8 +6,9 @@
 
 :root {
     --nav-height: 5rem;
-    --green: #76c853;
-    --greyy: #111;
+    --green: rgba(118, 200, 83, 1);
+    --green-trans: rgba(118, 200, 83, 0.6);
+    --grey: #aaa;
 
     --gap-tiny: 1rem;
     --gap-x-small: 2rem;
@@ -70,7 +71,7 @@ nav a:hover::after {
 }
 
 section {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid var(--grey);
 }
 
 section,
@@ -177,7 +178,7 @@ ul {
     border-bottom: 2px solid var(--green);
 }
 .icon {
-    height: 2rem;
+    height: 3rem;
     transition: all var(--transition-time);
 }
 .icon:focus,
@@ -190,4 +191,35 @@ ul {
 .projectimg img {
     object-fit: contain;
     width: 100%;
+}
+
+/* Experience/education timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+.timeline-card {
+    position: relative;
+    margin: var(--gap-tiny);
+    padding: var(--gap-x-small);
+    width: 50%;
+    background: var(--green-trans);
+}
+.timeline-card img {
+    position: absolute;
+    width: var(--gap-small);
+    left: calc(-0.75 * var(--gap-small));
+    border-radius: 50%;
+    z-index: 10;
+}
+.timeline-info {
+    position: relative;
+    background: white;
+    padding: var(--gap-tiny);
+    border-radius: 1rem;
+    font-size: 1rem;
 }
