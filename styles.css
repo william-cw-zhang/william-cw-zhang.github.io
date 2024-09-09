@@ -39,7 +39,7 @@ section, footer {
 }
 nav, section { border-bottom: 1px solid var(--grey); }
 .plain-link {
-    /* make hyperlinks look like normal text*/
+    /* make hyperlinks look like normal text */
     color: inherit;
     text-decoration: none;
 }
@@ -53,10 +53,19 @@ nav, section { border-bottom: 1px solid var(--grey); }
     margin-right: 0.25rem;
     display: inline-block; /* this line makes margin/padding work right */
 }
-
+.section-title {
+    margin-bottom: var(--gap-small);
+}
+.section-title::after {
+    content: "";
+    display: block;
+    height: 0.25rem;
+    width: var(--gap-large);
+    background-color: var(--green);
+}
 /* ^^^ PAGE DEFAULTS ^^^ */
 
-/* vvv Sticky nav bar w/nav button animations vvv*/
+/* vvv NAV BAR vvv*/
 nav {
     position: sticky;
     top: 0;
@@ -80,13 +89,10 @@ nav a::after {
     background-color: var(--green);
     transition: all var(--transition-time);
 }
-nav a:focus::after,
-nav a:hover::after {
-    width: 100%;
-}
-/* ^^^ Sticky nav bar w/nav button animations ^^^ */
+nav a:hover::after { width: 100%; }
+/* ^^^ NAV BAR ^^^ */
 
-/* vvv Header/landing page vvv */
+/* vvv HEADER/LANDING vvv */
 header {
     height: calc(100vh - var(--nav-height));
     background-image:
@@ -102,20 +108,10 @@ header .compartment {
     align-items: center;
     font-size: 1.5rem;
 }
-/* ^^^ Header/landing page ^^^ */
+/* ^^^ HEADER/LANDING page ^^^ */
 
-section h2 {
-    margin-bottom: var(--gap-small);
-    font-size: 3rem;
-}
-
-h2::after {
-    content: "";
-    display: block;
-    height: 0.25rem;
-    width: var(--gap-large);
-    background-color: var(--green);
-}
+/* vvv PROJECT CARD vvv */
+/* ^^^ PROJECT CARD ^^^ */
 
 ul {
     list-style-position: inside;
@@ -146,7 +142,7 @@ ul {
     gap: var(--gap-large);
 }
 .projectinfo > * {
-    margin-top: var(--gap-x-small);
+    margin-bottom: var(--gap-x-small);
 }
 .projectlinks {
     display: flex;
@@ -193,7 +189,8 @@ ul {
     z-index: -1;
     animation: moveline 5s linear forwards;  /* seconds = number of cards */
 }
-/* vvv Timeline card w/icon vvv*/
+
+/* vvv TIMELINE CARD vvv*/
 .timeline-card {
     width: 50%;
     border-radius: 1rem;
@@ -234,9 +231,9 @@ ul {
 .timeline-icon-bg img {
     width: 100%;
 }
-/* ^^^ Timeline card w/icon ^^^ */
+/* ^^^ TIMELINE CARD ^^^ */
 
-/* vvv Timeline animation vvv */
+/* vvv TIMELINE ANIMATION vvv */
 @keyframes moveline {
     /* line motion */
     0% { height: 0 }
@@ -257,7 +254,4 @@ ul {
 .timeline-card:nth-child(3) { animation-delay: 2s; }
 .timeline-card:nth-child(4) { animation-delay: 3s; }
 .timeline-card:nth-child(5) { animation-delay: 4s; }
-/* ^^^ Timeline animation ^^^ */
-
-/* vvv Contact info vvv */
-/* ^^^ Contact info ^^^ */
+/* ^^^ TIMELINE ANIMATION ^^^ */
