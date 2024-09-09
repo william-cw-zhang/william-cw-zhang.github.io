@@ -255,7 +255,5 @@ ul {
 /* ^^^ TIMELINE ANIMATION ^^^ */
 
 /* vvv CONTACT INFO vvv */
-#contact-card {
-    max-width: calc(var(--max-width) / 2);
-}
+#contact-card { max-width: calc(var(--max-width) / 2); }
 /* ^^^ CONTACT INFO ^^^ */
