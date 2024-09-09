@@ -38,11 +38,7 @@ section, footer {
     padding-bottom: var(--gap-small);
 }
 nav, section { border-bottom: 1px solid var(--grey); }
-.plain-link {
-    /* make hyperlinks look like normal text */
-    color: inherit;
-    text-decoration: none;
-}
+ul { list-style-position: inside; }
 .btn {
     border: 2px solid var(--green);
     border-radius: 1rem;
@@ -53,6 +49,21 @@ nav, section { border-bottom: 1px solid var(--grey); }
     margin-right: 0.25rem;
     display: inline-block; /* this line makes margin/padding work right */
 }
+.compartment {
+    max-width: var(--max-width);
+    padding: 0 2rem;  /* be offset in narrow viewport */
+    margin: 0 auto;   /* be centered in wide viewport */
+}
+.icon {
+    height: 3rem;
+    transition: all var(--transition-time);
+}
+.icon:hover { transform: scale(1.25); }
+.plain-link {
+    /* make hyperlinks look like normal text */
+    color: inherit;
+    text-decoration: none;
+}
 .section-title {
     margin-bottom: var(--gap-small);
 }
@@ -62,11 +73,6 @@ nav, section { border-bottom: 1px solid var(--grey); }
     height: 0.25rem;
     width: var(--gap-large);
     background-color: var(--green);
-}
-.compartment {
-    max-width: var(--max-width);
-    padding: 0 2rem;  /* be offset in narrow viewport */
-    margin: 0 auto;   /* be centered in wide viewport */
 }
 /* ^^^ PAGE DEFAULTS ^^^ */
 
@@ -116,54 +122,31 @@ header .compartment {
 /* ^^^ HEADER/LANDING page ^^^ */
 
 /* vvv PROJECT CARD vvv */
-/* ^^^ PROJECT CARD ^^^ */
-
-ul {
-    list-style-position: inside;
-}
-
-/* Main container used to compartmentalize content */
-.compartment-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--gap-x-small);
-}
-
-/* Subcontainer for project information */
-.projectbox {
+.project-card {
     margin-bottom: var(--gap-small);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--gap-large);
 }
-.projectinfo > * {
-    margin-bottom: var(--gap-x-small);
-}
-.projectlinks {
+.project-info > * { margin-bottom: var(--gap-x-small); }
+.repo-link {
     display: flex;
     align-items: center;
     gap: var(--gap-tiny);
 }
-.projectlinks > p:first-child {
-    border-bottom: 2px solid var(--green);
+.repo-link > p:first-child {
+    border-bottom: 0.125rem solid var(--green);  /* underline "Visit Repo" */
+    margin-bottom: 0.5rem;                       /* point slightly above icon center */
 }
-.icon {
-    height: 3rem;
-    transition: all var(--transition-time);
-}
-.icon:focus,
-.icon:hover {
-    transform: scale(1.25);
-}
-.projectimg {
+.project-img {
     max-width: 300px;
 }
-.projectimg img {
+.project-img img {
     object-fit: contain;
     width: 100%;
 }
+/* ^^^ PROJECT CARD ^^^ */
 
 /* vvv TIMELINE vvv*/
 .timeline {
@@ -257,3 +240,12 @@ ul {
 /* vvv CONTACT INFO vvv */
 #contact-card { max-width: calc(var(--max-width) / 2); }
 /* ^^^ CONTACT INFO ^^^ */
+
+/* vvv FOOTER vvv */
+#footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-x-small);
+}
+/* ^^^ FOOTER ^^^ */
