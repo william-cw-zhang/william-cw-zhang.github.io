@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav>
+    <div class="compartment" id="nav-buttons">
+      <a href="#projects" class="plain-link">Projects & Skills</a>
+      <a href="#accomplishments" class="plain-link">Accomplishments</a>
+      <a href="#contact" class="plain-link">Contact</a>
+    </div>
+  </nav>
   <header>
     <div class="compartment">
-      <nav>
-        <a href="#projects" class="plain-link">Projects & Skills</a>
-        <a href="#accomplishments" class="plain-link">Accomplishments</a>
-        <a href="#contact" class="plain-link">Contact</a>
-      </nav>
-    </div>
-    <div class="compartment compartment-nameplate">
-      <div class="nameplate">
+      <div>
         <h1>William Zhang</h1>
         <p>AI/ML Researcher and Developer</p>
         <a href="#contact" class="btn plain-link">Contact me!</a>
@@ -26,9 +26,9 @@
   </header>
   <section id="projects">
     <div class="compartment">
-      <h2>Projects & Skills</h2>
-      <div class="projectbox">
-        <div class="projectinfo">
+      <h2 class="section-title">Projects & Skills</h2>
+      <div class="project-card">
+        <div class="project-info">
           <h3>Project 1</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
           <ul>
@@ -36,20 +36,18 @@
             <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
             <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
           </ul>
-          <div class="projectlinks">
+          <div class="repo-link">
             <p>Visit Repo &nbsp;&rarr;</p>
-            <a href="">
-              <img src="images/github-mark.svg" alt="GitHub" class="icon">
-            </a>
+            <a href=""><img src="images/github-mark.svg" alt="GitHub" class="icon"></a>
           </div>
         </div>
-        <div class="projectimg">
+        <div class="project-img">
           <!-- Photo by Domink Scythe -->
           <img src="images/robot.jpg" alt="Robot">
         </div>
       </div>
-      <div class="projectbox">
-        <div class="projectinfo">
+      <div class="project-card">
+        <div class="project-info">
           <h3>Project 2</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
           <ul>
@@ -57,20 +55,18 @@
             <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
             <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
           </ul>
-          <div class="projectlinks">
+          <div class="repo-link">
             <p>Visit Repo &nbsp;&rarr;</p>
-            <a href="">
-              <img src="images/github-mark.svg" alt="GitHub" class="icon">
-            </a>
+            <a href=""><img src="images/github-mark.svg" alt="GitHub" class="icon"></a>
           </div>
         </div>
-        <div class="projectimg">
+        <div class="project-img">
           <!-- Photo by Domink Scythe -->
           <img src="images/robot.jpg" alt="Robot">
         </div>
       </div>
-      <div class="projectbox">
-        <div class="projectinfo">
+      <div class="project-card">
+        <div class="project-info">
           <h3>Project 3</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
           <ul>
@@ -78,14 +74,12 @@
             <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
             <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
           </ul>
-          <div class="projectlinks">
+          <div class="repo-link">
             <p>Visit Repo &nbsp;&rarr;</p>
-            <a href="">
-              <img src="images/github-mark.svg" alt="GitHub" class="icon">
-            </a>
+            <a href=""><img src="images/github-mark.svg" alt="GitHub" class="icon"></a>
           </div>
         </div>
-        <div class="projectimg">
+        <div class="project-img">
           <!-- Photo by Domink Scythe -->
           <img src="images/robot.jpg" alt="Robot">
         </div>
@@ -94,12 +88,11 @@
   </section>
   <section id="accomplishments">
     <div class="compartment">
-      <h2>Accomplishments</h2>
+      <h2 class="section-title">Accomplishments</h2>
       <div class="timeline">
         <div class="timeline-card">
-          <div class="timeline-icon-bg">
-            <img src="images/cpu.svg" alt="CPU">
-          </div><div class="timeline-info">
+          <div class="timeline-icon"><img src="images/cpu.svg" alt="CPU"></div>
+          <div class="timeline-info">
             <h4>AI/ML Subject Matter Expert</h4>
             <medium>JHUAPL 2022 - Present</medium>
             <p>
@@ -111,9 +104,8 @@
           </div>
         </div>
         <div class="timeline-card">
-          <div class="timeline-icon-bg">
-            <img src="images/cpu.svg" alt="CPU">
-          </div><div class="timeline-info">
+          <div class="timeline-icon"><img src="images/cpu.svg" alt="CPU"></div>
+          <div class="timeline-info">
             <h4>Algorithm Developer</h4>
             <medium>JHUAPL 2020 - 2022</medium>
             <p>
@@ -125,9 +117,8 @@
           </div>
         </div>
         <div class="timeline-card">
-          <div class="timeline-icon-bg">
-            <img src="images/graduation.svg" alt="Graduation">
-          </div><div class="timeline-info">
+          <div class="timeline-icon"><img src="images/graduation.svg" alt="Graduation"></div>
+          <div class="timeline-info">
             <h4>MSE Applied & Computational Mathematics</h4>
             <medium>Johns Hopkins University 2020</medium>
             <p>
@@ -139,9 +130,8 @@
           </div>
         </div>
         <div class="timeline-card">
-          <div class="timeline-icon-bg">
-            <img src="images/cpu.svg" alt="CPU">
-          </div><div class="timeline-info">
+          <div class="timeline-icon"><img src="images/cpu.svg" alt="CPU"></div>
+          <div class="timeline-info">
             <h4>Analyst</h4>
             <medium>JHUAPL 2018 - 2020</medium>
             <p>
@@ -153,9 +143,8 @@
           </div>
         </div>
         <div class="timeline-card">
-          <div class="timeline-icon-bg">
-            <img src="images/graduation.svg" alt="Graduation">
-          </div><div class="timeline-info">
+          <div class="timeline-icon"><img src="images/graduation.svg" alt="Graduation"></div>
+          <div class="timeline-info">
             <h4>MSE Electrical & Computer Engineering</h4>
             <medium>Johns Hopkins University 2017</medium>
             <p>
@@ -171,8 +160,8 @@
   </section>
   <section id="contact">
     <div class="compartment">
-      <h2>Contact</h2>
-      <div class="compartment-contact">
+      <h2 class="section-title">Contact</h2>
+      <div id="contact-card">
         <p>
           I've got you covered for analysis, algorithm development,
           and technical leadership. Expect me to solve problems rigorously,
@@ -183,15 +172,9 @@
     </div>
   </section>
   <footer>
-    <div class="compartment">
-      <div class="compartment-icons">
-        <a href="">
-          <img src="images/github-mark.svg" alt="GitHub" class="icon">
-        </a>
-        <a href="" alt="LinkedIn">
-          <img src="images/linkedin-icon.svg" alt="GitHub" class="icon">
-        </a>
-      </div>
+    <div id="footer-icons">
+      <a href=""><img src="images/github-mark.svg" alt="GitHub" class="icon"></a>
+      <a href="" alt="LinkedIn"><img src="images/linkedin-icon.svg" alt="GitHub" class="icon"></a>
     </div>
   </footer>
 </body>
