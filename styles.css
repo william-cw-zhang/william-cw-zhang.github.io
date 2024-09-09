@@ -223,42 +223,16 @@ ul {
     z-index: -1;
     animation: moveline 5s linear forwards;  /* seconds = number of cards */
 }
+/* vvv Timeline card w/icon vvv*/
 .timeline-card {
+    width: 50%;
+    border-radius: 1rem;
+    background: var(--green-trans);
     position: relative;
     margin-bottom: var(--gap-x-small);
     padding: var(--gap-x-small);
-    border-radius: 1rem;
-    width: 50%;
-    background: var(--green-trans);
-    opacity: 0;
     animation: movedown 1s linear forwards;
-}
-.timeline-icon-bg {
-    background: white;
-    position: absolute;
-    height: var(--gap-small);
-    width: var(--gap-small);
-    left: calc(-1.2 * var(--gap-small));
-    border-radius: 50%;
-    z-index: 10;
-}
-.timeline-icon-bg img {
-    width: 100%;
-}
-.timeline-card:nth-child(1) {
-    animation-delay: 0s;
-}
-.timeline-card:nth-child(2) {
-    animation-delay: 1s;
-}
-.timeline-card:nth-child(3) {
-    animation-delay: 2s;
-}
-.timeline-card:nth-child(4) {
-    animation-delay: 3s;
-}
-.timeline-card:nth-child(5) {
-    animation-delay: 4s;
+    opacity: 0;
 }
 .timeline-info {
     position: relative;
@@ -278,10 +252,22 @@ ul {
     border-right: 1rem solid white;
     z-index: 1;
 }
+.timeline-icon-bg {  /* SVGs are not opaque. */
+    background: white;
+    position: absolute;
+    height: var(--gap-small);
+    width: var(--gap-small);
+    left: calc(-1.2 * var(--gap-small));
+    border-radius: 50%;
+    z-index: 10;
+}
+.timeline-icon-bg img {
+    width: 100%;
+}
+/* ^^^ Timeline card w/icon ^^^ */
 
-
-/* Timeline animations */
-@keyframes moveline {
+/* vvv Timeline animation vvv */
+@keyframes moveline {  /* line motion */
     0% {
         height: 0
     }
@@ -289,7 +275,7 @@ ul {
         height: 100%
     }
 }
-@keyframes movedown {
+@keyframes movedown {  /* card motion */
     0% {
         opacity: 0;
         transform: translateY(-1rem);
@@ -299,3 +285,16 @@ ul {
         transform: translateY(0);
     }
 }
+.timeline-card:nth-child(2) {
+    animation-delay: 1s;
+}
+.timeline-card:nth-child(3) {
+    animation-delay: 2s;
+}
+.timeline-card:nth-child(4) {
+    animation-delay: 3s;
+}
+.timeline-card:nth-child(5) {
+    animation-delay: 4s;
+}
+/* ^^^ Timeline animation ^^^ */
