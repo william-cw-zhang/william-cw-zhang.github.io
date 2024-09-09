@@ -17,7 +17,10 @@
     --gap-medium: 6rem;
     --gap-large: 8rem;
     --gap-x-large: 16rem;
+    --gap-timeline: 3rem;
 
+    --timeline-width: 0.5rem;
+    --timeline-icon-size: 3rem;
     --transition-time: 0.2s;
 }
 
@@ -154,17 +157,17 @@ header .compartment {
     flex-direction: column;
     align-items: center;
     position: relative;
-    max-width: 1200px;
-    margin: 100px auto;
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 .timeline::after {
-    background-color: var(--green-trans);
     content: "";
+    background-color: var(--green-trans);
     position: absolute;
-    width: 0.5rem;
-    height: 100%;
     top: 0;
-    left: calc(25% - 0.6 * var(--gap-small) - .125rem);
+    left: calc(25% - var(--gap-timeline)); /* align with card and shift to left */
+    height: 100%;
+    width: var(--timeline-width);
     margin-left: -0.5rem;
     z-index: -1;
     animation: moveline 5s linear forwards;  /* seconds = number of cards */
@@ -173,45 +176,42 @@ header .compartment {
 
 /* vvv TIMELINE CARD vvv*/
 .timeline-card {
-    width: 50%;
-    border-radius: 1rem;
     background: var(--green-trans);
+    border-radius: 1rem;
     position: relative;
-    margin-bottom: var(--gap-x-small);
+    width: 50%;
     padding: var(--gap-x-small);
-    animation: movedown 1s linear forwards;
+    margin-bottom: var(--gap-x-small);
     opacity: 0;
+    animation: movedown 1s linear forwards;
 }
 .timeline-info {
-    position: relative;
     background: white;
-    padding: var(--gap-tiny);
     border-radius: 1rem;
+    position: relative;
+    padding: var(--gap-tiny);
     font-size: 1rem;
 }
 .timeline-pointer {
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 1rem;
-    left: -0.9rem;
     border-top: 1rem solid transparent;
     border-bottom: 1rem solid transparent;
     border-right: 1rem solid white;
-    z-index: 1;
-}
-.timeline-icon-bg {  /* SVGs are not opaque. */
-    background: white;
     position: absolute;
-    height: var(--gap-small);
-    width: var(--gap-small);
-    left: calc(-1.2 * var(--gap-small));
+    top: 1rem;
+    left: -0.9rem;
+    height: 0;
+    width: 0;
+}
+.timeline-icon {
+    background: white;  /* SVGs are not opaque. */
     border-radius: 50%;
-    z-index: 10;
+    position: absolute;
+    /* shift icon to line right edge, then shift half icon width, then shift half line width */
+    left: calc(-1 * var(--gap-timeline) - var(--timeline-icon-size) / 2 - var(--timeline-width) / 2);
+    height: var(--timeline-icon-size);
+    width: var(--timeline-icon-size);
 }
-.timeline-icon-bg img {
-    width: 100%;
-}
+.timeline-icon img { width: 100%; }
 /* ^^^ TIMELINE CARD ^^^ */
 
 /* vvv TIMELINE ANIMATION vvv */
