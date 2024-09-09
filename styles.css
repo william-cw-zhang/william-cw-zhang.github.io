@@ -90,7 +90,8 @@ h1 {
     font-size: 5rem;
 }
 
-h2 {
+section h2 {
+    margin-bottom: var(--gap-small);
     font-size: 3rem;
 }
 
@@ -123,7 +124,7 @@ ul {
     max-width: 600px;
 }
 .compartment-contact p {
-    margin: var(--gap-small) 0 var(--gap-x-small) 0;
+    margin-bottom: var(--gap-x-small);
 }
 .compartment-icons {
     display: flex;
@@ -169,7 +170,7 @@ ul {
 
 /* Subcontainer for project information */
 .projectbox {
-    margin-top: var(--gap-small);
+    margin-bottom: var(--gap-small);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,3 +299,6 @@ ul {
     animation-delay: 4s;
 }
 /* ^^^ Timeline animation ^^^ */
+
+/* vvv Contact info vvv */
+/* ^^^ Contact info ^^^ */
