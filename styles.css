@@ -63,6 +63,11 @@ nav, section { border-bottom: 1px solid var(--grey); }
     width: var(--gap-large);
     background-color: var(--green);
 }
+.compartment {
+    max-width: var(--max-width);
+    padding: 0 2rem;  /* be offset in narrow viewport */
+    margin: 0 auto;   /* be centered in wide viewport */
+}
 /* ^^^ PAGE DEFAULTS ^^^ */
 
 /* vvv NAV BAR vvv*/
@@ -118,14 +123,6 @@ ul {
 }
 
 /* Main container used to compartmentalize content */
-.compartment {
-    max-width: var(--max-width);
-    padding: 0 2rem;  /* narrow window spacing */
-    margin: 0 auto;   /* centered in wide window */
-}
-.compartment-contact {
-    max-width: calc(var(--max-width) / 2);
-}
 .compartment-icons {
     display: flex;
     align-items: center;
@@ -168,7 +165,7 @@ ul {
     width: 100%;
 }
 
-/* Experience/education timeline */
+/* vvv TIMELINE vvv*/
 .timeline {
     display: flex;
     flex-direction: column;
@@ -189,6 +186,7 @@ ul {
     z-index: -1;
     animation: moveline 5s linear forwards;  /* seconds = number of cards */
 }
+/* ^^^ TIMELINE ^^^ */
 
 /* vvv TIMELINE CARD vvv*/
 .timeline-card {
@@ -255,3 +253,9 @@ ul {
 .timeline-card:nth-child(4) { animation-delay: 3s; }
 .timeline-card:nth-child(5) { animation-delay: 4s; }
 /* ^^^ TIMELINE ANIMATION ^^^ */
+
+/* vvv CONTACT INFO vvv */
+#contact-card {
+    max-width: calc(var(--max-width) / 2);
+}
+/* ^^^ CONTACT INFO ^^^ */
