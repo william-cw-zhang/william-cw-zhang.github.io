@@ -29,9 +29,15 @@ body {
     line-height: 1.5;
 }
 h1 { font-size: 5rem; }
+h2 { font-size: 3rem; }
 h3 { font-size: 2rem; }
 h4 { font-size: 1.5rem; }
 p { margin-bottom: var(--gap-x-small); }
+section, footer {
+    padding-top: var(--gap-medium);
+    padding-bottom: var(--gap-small);
+}
+nav, section { border-bottom: 1px solid var(--grey); }
 .plain-link {
     /* make hyperlinks look like normal text*/
     color: inherit;
@@ -45,26 +51,10 @@ p { margin-bottom: var(--gap-x-small); }
     font-size: 1.25rem;
     margin-bottom: 0.25rem;
     margin-right: 0.25rem;
+    display: inline-block; /* this line makes margin/padding work right */
 }
+
 /* ^^^ PAGE DEFAULTS ^^^ */
-
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: calc(100vh - var(--nav-height));
-    background-image:
-        /* Photo by Bench Accounting on Unsplash */
-        linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3)),
-        url("images/header-bg.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-header .compartment {
-    width: 100%;
-}
 
 /* vvv Sticky nav bar w/nav button animations vvv*/
 nav {
@@ -96,16 +86,23 @@ nav a:hover::after {
 }
 /* ^^^ Sticky nav bar w/nav button animations ^^^ */
 
-nav,
-section {
-    border-bottom: 1px solid var(--grey);
+/* vvv Header/landing page vvv */
+header {
+    height: calc(100vh - var(--nav-height));
+    background-image:
+        /* Photo by Bench Accounting on Unsplash */
+        linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3)),
+        url("images/header-bg.jpg");
+    background-position: center;
+    background-size: cover;
 }
-
-section,
-footer {
-    padding-top: var(--gap-medium);
-    padding-bottom: var(--gap-small);
+header .compartment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
 }
+/* ^^^ Header/landing page ^^^ */
 
 section h2 {
     margin-bottom: var(--gap-small);
@@ -138,17 +135,6 @@ ul {
     align-items: center;
     justify-content: center;
     gap: var(--gap-x-small);
-}
-
-/* Introduction and call-to-action box */
-.compartment-nameplate {
-    height: calc(100% - var(--nav-height));
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-}
-.compartment-nameplate p {
-    margin-bottom: var(--gap-small);
 }
 
 /* Subcontainer for project information */
