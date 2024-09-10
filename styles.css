@@ -30,6 +30,7 @@ body {
     color: black;
     font-family: Verdana, sans-serif;
     line-height: 1.5;
+    overflow-x: hidden;
 }
 h1 { font-size: 5rem; }
 h2 { font-size: 3rem; }
@@ -130,7 +131,7 @@ header .compartment {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--gap-large);
+    gap: var(--gap-medium);
 }
 .project-info > * { margin-bottom: var(--gap-x-small); }
 .repo-link {
@@ -143,11 +144,18 @@ header .compartment {
     margin-bottom: 0.5rem;                       /* point slightly above icon center */
 }
 .project-img {
-    max-width: 300px;
+    max-width: 320px;
 }
 .project-img img {
     object-fit: contain;
     width: 100%;
+}
+@media(max-width: 640px) {
+    /* below var(--max-width) */
+    .project-card {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 /* ^^^ PROJECT CARD ^^^ */
 
